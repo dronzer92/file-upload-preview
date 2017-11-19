@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c1b48ad-1266-4242-baff-9ab962824cd6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/15110920903795a116f7aa69e9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/1511092135655a116fa7d4384.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/15110923837715a11709f3b311.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/15110924201065a1170c4b786a.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/15110924516835a1170e377120.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/15110925776745a117161823cc.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload/15110927201555a1171f0ce3a2.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/file-upload-preview.css" afterPath="$PROJECT_DIR$/dist/css/file-upload-preview.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/js/file-upload-preview.js" afterPath="$PROJECT_DIR$/dist/js/file-upload-preview.js" />
@@ -35,20 +42,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.041667">
+            <state vertical-scroll-proportion="0.51699466">
               <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file-upload-preview.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="file-upload-preview.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/js/file-upload-preview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6483705">
+            <state vertical-scroll-proportion="0.0">
               <caret line="169" column="63" selection-start-line="169" selection-start-column="63" selection-end-line="169" selection-end-column="63" />
               <folding>
                 <marker date="1511093000719" expanded="true" signature="1488:1693" placeholder="..." />
@@ -425,22 +432,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.041667">
-          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/js/file-upload-preview.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6483705">
+        <state vertical-scroll-proportion="0.0">
           <caret line="169" column="63" selection-start-line="169" selection-start-column="63" selection-end-line="169" selection-end-column="63" />
           <folding>
             <marker date="1511093000719" expanded="true" signature="1488:1693" placeholder="..." />
             <marker date="1511093000719" expanded="true" signature="8018:8577" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51699466">
+          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
