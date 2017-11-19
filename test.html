@@ -64,15 +64,30 @@
 		var file = new file_upload_preview({
             selector: '#image_container',
             ajax_src: 'submit.php',
-            extensions: 'jpg|PNG|pdf->http://sdfsdfsdfsd.png|docx->[<i class="fa fa-pencil"></a>]',
+            extensions: 'jpg|PNG|pdf->http://sdfsdfsdfsd.png|docx->[<i class="fa fa-pencil"></i>]',
             base_url: 'upload/',
 			has_main: true
         });
 
+
         var file_2 = new file_upload_preview({
             selector: '#image_container_2',
             ajax_src: 'submit.php',
-            extensions: 'jpg|PNG|pdf->http://sdfsdfsdfsd.png|docx->[<i class="fa fa-pencil"></a>]',
+            extensions: [
+                'jpg',
+                'PNG',
+                {
+                    type: 'jpeg'
+                },
+                {
+                    type: 'pdf',
+                    icon: 'http://sdfsdfsdfsd.png'
+                },
+                {
+                    type: 'docx',
+                    icon: '<i class="fa fa-pencil"></i>'
+                }
+            ],
             base_url: 'upload/',
 			has_main: true
         });

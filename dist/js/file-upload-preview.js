@@ -10,9 +10,9 @@
 			has_rotation: true,
 			max_upload: 50,
 			base_url: '',
-			hidden_name_index: 'img_index',
-			hidden_name_file: 'img_name',
-			hidden_name_rotate: 'img_rotate',
+			post_file_index: 'img_index',
+			post_file_name: 'img_name',
+			post_file_rotate: 'img_rotate',
 			on_init: null,
 			on_upload: null,
 			on_error: null,
@@ -143,20 +143,38 @@
 		this.allowed_extensions = [];
 		this.allowed_extensions_icons = {};
 
-		var extensions = this.config.extensions.split('|');
+		var extensions = this.config.extensions;
 
-		for (var i = 0; i < extensions.length; i++) {
+		if (typeof extensions == 'string') {
+			extensions = extensions.split('|');
 
-			if (extensions[i].indexOf('->') > 0) {
-				var parts = extensions[i].split('->');
-				var ext = parts[0].toLowerCase();
-				var data = parts[1];
+			for (var i = 0; i < extensions.length; i++) {
 
-				this.allowed_extensions.push(ext);
-				this.allowed_extensions_icons[ext] = data;
-			} else {
-				this.allowed_extensions.push(extensions[i].toLowerCase());
+				if (extensions[i].indexOf('->') > 0) {
+					var parts = extensions[i].split('->');
+					var ext = parts[0].toLowerCase();
+					var data = parts[1];
+
+					this.allowed_extensions.push(ext);
+					this.allowed_extensions_icons[ext] = data;
+				} else {
+					this.allowed_extensions.push(extensions[i]);
+				}
 			}
+		} else {
+
+			for (var i = 0; i < extensions.length; i++) {
+				if (typeof extensions[i] == 'object') {
+					this.allowed_extensions.push(extensions[i].type);
+
+					if (extensions[i].hasOwnProperty('icon')) {
+						this.allowed_extensions_icons[extensions[i].type] = extensions[i].icon;
+					}
+				} else {
+					this.allowed_extensions.push(extensions[i]);
+				}
+			}
+
 		}
 	};
 
@@ -243,13 +261,14 @@
 
 		if (this.allowed_extensions_icons.hasOwnProperty(ext)) {
 			var icon = this.allowed_extensions_icons[ext];
-			if (icon.indexOf('[') == 0 && icon.indexOf(']') == icon.length - 1) {
-				icon = icon.slice(1, -1);
-			} else {
-				icon = '<img src="' + icon + '" alt="">';
-			}
 
-			img = icon;
+			if (icon.indexOf('[') == 0 && icon.lastIndexOf(']') == icon.length - 1) {
+				img = icon.slice(1, -1);
+			} else if (icon.indexOf('<') == 0 && icon.lastIndexOf('>') == icon.length - 1) {
+				img = icon;
+			} else {
+				img = '<img src="' + icon + '" alt="">';
+			}
 
 		} else {
 			img = '<img src="' + base_url + image_name + '" alt="">';
@@ -263,9 +282,9 @@
 		var old_check = (is_predefined) ? 'uploaded:' : '';
 
 		var html = '<div class="imgbox" data-index="' + file_count + '">\
-			<input type="hidden" class="img_index" name="' + this.config.hidden_name_index + '[' + file_count + ']" value = "' + file_count + '" >\
-		<input type="hidden" class="img_name" name="' + this.config.hidden_name_file + '[' + file_count + ']" value = "' + old_check + base_url + image_name + '" >\
-		<input type="hidden" class="img_rotate" name="' + this.config.hidden_name_rotate + '[' + file_count + ']" value = "0" >\
+			<input type="hidden" class="img_index" name="' + this.config.post_file_index + '[' + file_count + ']" value = "' + file_count + '" >\
+		<input type="hidden" class="img_name" name="' + this.config.post_file_name + '[' + file_count + ']" value = "' + old_check + base_url + image_name + '" >\
+		<input type="hidden" class="img_rotate" name="' + this.config.post_file_rotate + '[' + file_count + ']" value = "0" >\
 		' + img + '\
 		<button type="button" class="remove_image remove_image' + this.instense + '" > <i class="fa fa-times"></i></button>\
 		</div>';
@@ -311,11 +330,11 @@
 			$(this).attr('data-index', e);
 			$(this).find('.img_index').val(e);
 
-			$(this).find('.img_index').attr('name', '' + self.config.hidden_name_index + '[' + e + ']');
+			$(this).find('.img_index').attr('name', '' + self.config.post_file_index + '[' + e + ']');
 
-			$(this).find('.img_name').attr('name', '' + self.config.hidden_name_file + '[' + e + ']');
+			$(this).find('.img_name').attr('name', '' + self.config.post_file_name + '[' + e + ']');
 
-			$(this).find('.img_rotate').attr('name', '' + self.config.hidden_name_rotate + '[' + e + ']');
+			$(this).find('.img_rotate').attr('name', '' + self.config.post_file_rotate + '[' + e + ']');
 		});
 	};
 
