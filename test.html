@@ -29,6 +29,13 @@
             </div>
 
             <div class="form-group">
+                <label class="col-sm-3 control-label">Photos 2</label>
+                <div class="col-sm-9">
+                    <div id="image_container_2"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <div class="col-sm-12 text-right">
                     <button type="submit" class="btn btn-success">Submit</button>
                 </div>
@@ -56,6 +63,14 @@
         */
 		var file = new file_upload_preview({
             selector: '#image_container',
+            ajax_src: 'submit.php',
+            extensions: 'jpg|PNG|pdf->http://sdfsdfsdfsd.png|docx->[<i class="fa fa-pencil"></a>]',
+            base_url: 'upload/',
+			has_main: true
+        });
+
+        var file_2 = new file_upload_preview({
+            selector: '#image_container_2',
             ajax_src: 'submit.php',
             extensions: 'jpg|PNG|pdf->http://sdfsdfsdfsd.png|docx->[<i class="fa fa-pencil"></a>]',
             base_url: 'upload/',
