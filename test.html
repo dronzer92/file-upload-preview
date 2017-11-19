@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+    <link rel="stylesheet" href="file-upload-preview.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>File upload</h1>
+
+        <form action="submit.php" method="post" class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Photos</label>
+                <div class="col-sm-9">
+                    <div id="image_container"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-12 text-right">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+    <script src="file-upload-preview.js"></script>
+
+    <script>
+
+        /*
+        * REQUIRED LIBRARIES
+        * > jQuery
+        * > Bootstrap
+        * > jQuery UI
+        * > Font Awesome
+        */
+		var file = new file_upload_preview({
+            selector: '#image_container',
+            ajax_src: 'submit.php',
+            extensions: 'jpg|PNG|pdf->http://sdfsdfsdfsd.png|docx->[<i class="fa fa-pencil"></a>]',
+            base_url: 'upload/',
+			has_main: true
+        });
+    </script>
+</body>
+</html>
