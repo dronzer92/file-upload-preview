@@ -9,7 +9,7 @@ if(isset($_FILES['upload_files'])){
 
 		$ext = pathinfo($_FILES['upload_files']['name']);
 		$newFileName = uniqid(time().rand(1, 1000)) . '.' .strtolower($ext['extension']);
-		$newFilePath = "./upload/" . $newFileName;
+		$newFilePath = "../upload/" . $newFileName;
 
 		//Upload the file into the temp dir
 		if(move_uploaded_file($tmpFilePath, $newFilePath)) {
