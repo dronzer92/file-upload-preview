@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
 
-    <link rel="stylesheet" href="../dist/css/file-upload-preview.css">
+    <link rel="stylesheet" href="../dest/css/file-upload-preview.min.css">
 
 </head>
 <body>
@@ -50,7 +50,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 
-    <script src="../dist/js/file-upload-preview.js"></script>
+    <script src="../dest/js/file-upload-preview.min.js"></script>
 
     <script>
 
@@ -65,7 +65,7 @@
             selector: '#image_container',
             ajax_src: 'submit.php',
             extensions: 'jpg|PNG|pdf->http://sdfsdfsdfsd.png|docx->[<i class="fa fa-pencil"></i>]',
-            base_url: 'upload/',
+            base_url: '../upload/',
 			has_main: true
         });
 
@@ -88,7 +88,7 @@
                     icon: '<i class="fa fa-pencil"></i>'
                 }
             ],
-            base_url: 'upload/',
+            base_url: '../upload/',
 			has_main: true
         });
     </script>
