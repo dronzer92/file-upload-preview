@@ -1,6 +1,12 @@
 # File Upload Preview
 The simple jquery plugin which send request to upload file and show its preview thumbnail.
 
+## Dependencies
+- jQuery
+- Bootstrap
+- jQuery UI
+- Font Awesome
+
 ## How to Install
 Include file upload preview css and js into project
 ```html
