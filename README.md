@@ -33,9 +33,13 @@ var file = new file_upload_preview({
 ```
 
 ## Options
-```javascript
-
-```
+Name | Required | Default | Description
+--- | :---: | --- | ---
+selector | required | null | div selector
+ajax_src | required | null | ajax post url
+extensions | optional | 'jpg,jpeg,png,gif' | files extensions
+base_url | optional | '' | base url where file upload 
+has_main | optional | false | enable drag n drop functionality
 
 ## Author
 [Raheel Khan](https://github.com/dronzer92)
