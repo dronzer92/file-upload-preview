@@ -46,6 +46,8 @@
 		this.allowed_extensions = [];
 		this.allowed_extensions_icons = {};
 		this.files_count = 0;
+		this.is_uploading = false;
+		this.is_uploading_count = 0;
 
 		this.set_extensions();
 
@@ -180,6 +182,7 @@
 
 
 	FU.prototype.input_change = function (event) {
+		this.set_is_uploading(true);
 		for (var x = 0; x < event.target.files.length; x++) {
 			if (this.check_max_upload()) return;
 
@@ -191,6 +194,7 @@
 			ext = ext[ext.length - 1];
 
 			if (this.allowed_extensions.indexOf(ext) == -1) {
+				this.set_is_uploading();
 				alert('File type .' + ext + ' is not allowed');
 			} else {
 				this.uploadFiles(form_data, this.files_count);
@@ -242,6 +246,8 @@
 				self.apply_remove_image();
 
 				self.check_max_upload();
+
+				self.set_is_uploading();
 
 				if (is_uploaded && self.config.on_upload && self.config.on_upload != null) {
 					self.config.on_upload(data.name);
@@ -338,6 +344,25 @@
 		});
 	};
 
+
+	FU.prototype.set_is_uploading = function (type) {
+		var self = this;
+		if (type) {
+			if (!this.check_max_upload()) {
+				this.is_uploading_count = this.files_count + event.target.files.length;
+				this.is_uploading = true;
+				window.onbeforeunload = function() {
+					return 'Some files are still getting uploaded. Taking this page away will terminate all the ongoing uploading.';
+				}
+			}
+		} else {
+			if (this.files_count >= (this.is_uploading_count - 1)) {
+				this.is_uploading = false;
+				this.is_uploading_count = 0;
+				window.onbeforeunload = null;
+			}
+		}
+	};
 
 	window.file_upload_preview = FU;
 })();
