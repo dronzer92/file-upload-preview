@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c1b48ad-1266-4242-baff-9ab962824cd6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,31 +20,23 @@
     <favorites_list name="file_upload" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="716">
-                <caret line="55" column="1" lean-forward="false" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-                <folding>
-                  <marker date="1514964835255" expanded="true" signature="468:513" ph="..." />
-                  <marker date="1514964835255" expanded="true" signature="584:673" ph="{&quot;selector&quot;: '##image_container'...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file-upload-preview.js" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="file-upload-preview.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/file-upload-preview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="351">
+              <caret line="355" column="17" lean-forward="true" selection-start-line="355" selection-start-column="17" selection-end-line="355" selection-end-column="17" />
               <folding>
-                <marker date="1511244416196" expanded="true" signature="1488:1693" ph="..." />
-                <marker date="1511244416196" expanded="true" signature="8018:8577" ph="..." />
+                <element signature="e#1959#2320#0" expanded="false" />
+                <element signature="e#2427#3168#0" expanded="false" />
+                <element signature="e#3497#3957#0" expanded="false" />
+                <element signature="e#4004#4941#0" expanded="false" />
+                <element signature="e#7194#8749#0" expanded="false" />
+                <element signature="e#8798#9181#0" expanded="false" />
+                <element signature="e#9226#9541#0" expanded="false" />
+                <element signature="e#9587#10033#0" expanded="false" />
+                <marker date="1519300310698" expanded="true" signature="1548:1753" ph="..." />
+                <marker date="1519300310698" expanded="true" signature="8168:8727" ph="..." />
               </folding>
             </state>
           </provider>
@@ -66,6 +57,12 @@
       <find>upload_loading</find>
       <find>refresh_draging</find>
       <find>predefined_images</find>
+      <find>.ajax(</find>
+      <find>is_uploading</find>
+      <find>check_max_upload</find>
+      <find>is_uploading_count</find>
+      <find>files_count</find>
+      <find>set_is_uploading</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,6 +80,9 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/js/file-upload-preview.js" />
+        <option value="$PROJECT_DIR$/demo/index.html" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -122,7 +122,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,6 +144,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,23 +222,25 @@
       <workItem from="1514358836373" duration="795000" />
       <workItem from="1514359735939" duration="39000" />
       <workItem from="1514963996573" duration="870000" />
+      <workItem from="1519298043844" duration="3287000" />
+      <workItem from="1519302165818" duration="1223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12590000" />
+    <option name="totallyTimeSpent" value="17100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1680929" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1717604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -267,7 +269,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -289,10 +291,18 @@
     <entry file="file://$PROJECT_DIR$/src/js/file-upload-preview.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="20" />
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
-            <marker date="1511244416196" expanded="true" signature="1488:1693" ph="..." />
-            <marker date="1511244416196" expanded="true" signature="8018:8577" ph="..." />
+            <element signature="e#1959#2320#0" expanded="false" />
+            <element signature="e#2427#3168#0" expanded="false" />
+            <element signature="e#3497#3957#0" expanded="false" />
+            <element signature="e#4004#4941#0" expanded="false" />
+            <element signature="e#7194#8749#0" expanded="false" />
+            <element signature="e#8798#9181#0" expanded="false" />
+            <element signature="e#9226#9541#0" expanded="false" />
+            <element signature="e#9587#10033#0" expanded="false" />
+            <marker date="1519300310698" expanded="true" signature="1548:1753" ph="..." />
+            <marker date="1519300310698" expanded="true" signature="8168:8727" ph="..." />
           </folding>
         </state>
       </provider>
@@ -316,8 +326,49 @@
         <state relative-caret-position="231">
           <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="20" />
           <folding>
-            <marker date="1511244416196" expanded="true" signature="1488:1693" ph="..." />
-            <marker date="1511244416196" expanded="true" signature="8018:8577" ph="..." />
+            <element signature="e#1959#2320#0" expanded="false" />
+            <element signature="e#2427#3168#0" expanded="false" />
+            <element signature="e#3497#3957#0" expanded="false" />
+            <element signature="e#4004#4941#0" expanded="false" />
+            <element signature="e#7194#8749#0" expanded="false" />
+            <element signature="e#8798#9181#0" expanded="false" />
+            <element signature="e#9226#9541#0" expanded="false" />
+            <element signature="e#9587#10033#0" expanded="false" />
+            <marker date="1519300310698" expanded="true" signature="1548:1753" ph="..." />
+            <marker date="1519300310698" expanded="true" signature="8168:8727" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1514964835255" expanded="true" signature="468:513" ph="..." />
+              <marker date="1514964835255" expanded="true" signature="584:673" ph="{&quot;selector&quot;: '##image_container'...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/file-upload-preview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="e#1959#2320#0" expanded="false" />
+            <element signature="e#2427#3168#0" expanded="false" />
+            <element signature="e#3497#3957#0" expanded="false" />
+            <element signature="e#4004#4941#0" expanded="false" />
+            <element signature="e#7194#8749#0" expanded="false" />
+            <element signature="e#8798#9181#0" expanded="false" />
+            <element signature="e#9226#9541#0" expanded="false" />
+            <element signature="e#9587#10033#0" expanded="false" />
+            <marker date="1519300310698" expanded="true" signature="1548:1753" ph="..." />
+            <marker date="1519300310698" expanded="true" signature="8168:8727" ph="..." />
           </folding>
         </state>
       </provider>
@@ -363,6 +414,40 @@
     <entry file="file://$PROJECT_DIR$/dist/css/file-upload-preview.css" />
     <entry file="file://$PROJECT_DIR$/dist/js/file-upload-preview.js" />
     <entry file="file://$PROJECT_DIR$/test/index.html" />
+    <entry file="file://$PROJECT_DIR$/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dest/js/file-upload-preview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+          <folding>
+            <marker date="1519300641234" expanded="true" signature="1548:1753" ph="..." />
+            <marker date="1519300641234" expanded="true" signature="8168:8727" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -370,22 +455,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/file-upload-preview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <marker date="1511244416196" expanded="true" signature="1488:1693" ph="..." />
-            <marker date="1511244416196" expanded="true" signature="8018:8577" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="716">
-            <caret line="55" column="1" lean-forward="false" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+          <first_editor relative-caret-position="217">
+            <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
             <folding>
               <marker date="1514964835255" expanded="true" signature="468:513" ph="..." />
               <marker date="1514964835255" expanded="true" signature="584:673" ph="{&quot;selector&quot;: '##image_container'...}" />
@@ -400,6 +474,25 @@
           <folding>
             <marker date="1514964835255" expanded="true" signature="468:513" ph="..." />
             <marker date="1514964835255" expanded="true" signature="584:673" ph="{&quot;selector&quot;: '##image_container'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/file-upload-preview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="355" column="17" lean-forward="true" selection-start-line="355" selection-start-column="17" selection-end-line="355" selection-end-column="17" />
+          <folding>
+            <element signature="e#1959#2320#0" expanded="false" />
+            <element signature="e#2427#3168#0" expanded="false" />
+            <element signature="e#3497#3957#0" expanded="false" />
+            <element signature="e#4004#4941#0" expanded="false" />
+            <element signature="e#7194#8749#0" expanded="false" />
+            <element signature="e#8798#9181#0" expanded="false" />
+            <element signature="e#9226#9541#0" expanded="false" />
+            <element signature="e#9587#10033#0" expanded="false" />
+            <marker date="1519300310698" expanded="true" signature="1548:1753" ph="..." />
+            <marker date="1519300310698" expanded="true" signature="8168:8727" ph="..." />
           </folding>
         </state>
       </provider>

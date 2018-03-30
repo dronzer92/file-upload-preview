@@ -187,6 +187,7 @@
 			if (this.check_max_upload()) return;
 
 			var form_data = new FormData();
+			form_data.append('base_url', this.config.base_url);
 			form_data.append('upload_files', event.target.files[x]);
 
 			var fileName = event.target.files[x].name;
