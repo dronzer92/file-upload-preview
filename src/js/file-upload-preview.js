@@ -39,9 +39,6 @@
 
 		this.instense = file_upload_instense;
 
-		if (this.config.has_main && this.config.has_main == true) {
-			$('head').append("<style>#" + this.container + " .imgbox:first-child:after {content: 'Main Picture';background: #337ab7;color: #fff;padding: 0 3px;position: absolute;top: 0;left: 0;border-top-left-radius: 4px;border-bottom-right-radius: 4px;}</style>");
-		}
 
 		this.allowed_extensions = [];
 		this.allowed_extensions_icons = {};
@@ -55,11 +52,17 @@
 
 		var rotate_class = (this.config.has_rotation) ? 'has_rotate' : '';
 
-		var h = '<button type="button" class="btn btn-primary select_files_btn">\
+		var has_main_class = '';
+		if (this.config.has_main && this.config.has_main == true) {
+			has_main_class = 'fu-imgPrev-hasMain';
+		}
+
+		// use div instead of button for firefox support
+		var h = '<div type="button" class="btn btn-primary select_files_btn">\
 		Select Files\
 		<input type="file" name="hidden_file_input' + file_upload_instense + '" class="hidden_file_input" id="hidden_file_input' + file_upload_instense + '" ' + multiple_files + '>\
-		</button>\
-		<div id="' + this.container + '" class="fu-imgPrev ' + rotate_class + '"></div>';
+		</div>\
+		<div id="' + this.container + '" class="fu-imgPrev ' + rotate_class + ' '+has_main_class+'"></div>';
 
 
 		$(this.config.selector).html(h);
@@ -84,7 +87,7 @@
 
 		this.apply_remove_image();
 
-		$(document).on('click', '.btn_rotate', function (e) {
+		$(this.config.selector).on('click', '.btn_rotate', function (e) {
 			e.stopImmediatePropagation();
 
 			var type = $(this).attr('data-type');
@@ -95,6 +98,10 @@
 				rotate_deg -= 90;
 			} else {
 				rotate_deg += 90;
+			}
+
+			if (rotate_deg > 360 || rotate_deg < -360) {
+				return;
 			}
 
 			$(this).parents('.imgbox').find('.img_rotate').val(rotate_deg);
@@ -182,7 +189,7 @@
 
 
 	FU.prototype.input_change = function (event) {
-		this.set_is_uploading(true);
+		this.set_is_uploading(true, event);
 		for (var x = 0; x < event.target.files.length; x++) {
 			if (this.check_max_upload()) return;
 
@@ -346,8 +353,9 @@
 	};
 
 
-	FU.prototype.set_is_uploading = function (type) {
+	FU.prototype.set_is_uploading = function (type, event) {
 		var self = this;
+		event = event || null;
 		if (type) {
 			if (!this.check_max_upload()) {
 				this.is_uploading_count = this.files_count + event.target.files.length;
