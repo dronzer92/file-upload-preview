@@ -13,6 +13,8 @@
 			post_file_index: 'img_index',
 			post_file_name: 'img_name',
 			post_file_rotate: 'img_rotate',
+			dimension: '',
+			file_size: '',
 			on_init: null,
 			on_upload: null,
 			on_error: null,
@@ -194,6 +196,12 @@
 			if (this.check_max_upload()) return;
 
 			var form_data = new FormData();
+			if (this.config.dimension != '') {
+				form_data.append('dimension', this.config.dimension);
+			}
+			if (this.config.file_size != '') {
+				form_data.append('file_size', this.config.file_size);
+			}
 			form_data.append('base_url', this.config.base_url);
 			form_data.append('upload_files', event.target.files[x]);
 
@@ -235,10 +243,10 @@
 
 				var html = '';
 				if (!data || typeof data != 'object') {
-					html = '<div class="imgbox imgbox-error" data-index="' + file_count + '"><i class="fa fa-exclamation-triangle"></i></div>';
+					html = '<div class="imgbox imgbox-error" data-index="' + file_count + '"><button type="button" class="remove_image remove_image' + self.instense + '" > <i class="fa fa-times"></i></button><i class="fa fa-exclamation-triangle"></i></div>';
 				} else {
 					if (data.error) {
-						html = '<div class="imgbox imgbox-error" data-index="' + file_count + '">' + data.message + '</div>';
+						html = '<div class="imgbox imgbox-error" data-index="' + file_count + '"><button type="button" class="remove_image remove_image' + self.instense + '" > <i class="fa fa-times"></i></button>' + data.message + '</div>';
 					} else {
 						html = self.append_image(data.name, file_count, self.config.base_url);
 						is_uploaded = true;
